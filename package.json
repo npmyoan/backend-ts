@@ -1,0 +1,31 @@
+{
+  "name": "backend-ts",
+  "version": "1.0.0",
+  "description": "Primer backendcon typescript",
+  "main": "index.js",
+  "scripts": {
+    "start": "node dist/index.js",
+    "test": "echo \"Hola Mundo\"",
+    "lint": "eslint src/**/*.ts --fix",
+    "format": "prettier --write src/**/*.ts",
+    "build": "tsc",
+    "dev": "npm run build && node dist/index.js",
+    "prepare": "husky"
+  },
+  "author": "Yoan Estrada",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^9.22.0",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.13.10",
+    "eslint": "^9.22.0",
+    "globals": "^16.0.0",
+    "husky": "^9.1.7",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.2",
+    "typescript-eslint": "^8.26.1"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
