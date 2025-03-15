@@ -16,7 +16,7 @@ export async function updateItem(_id: string, todoChange: Partial<TTodo>) {
     },
     {
       new: true,
-    }
+    },
   );
 
   return updateItem;
