@@ -10,7 +10,7 @@ export default [
   ...tseslint.configs.recommended,
   {
     rules: {
-      "no-console": "warn",
+      // "no-console": "warn",
     },
   },
 ];
