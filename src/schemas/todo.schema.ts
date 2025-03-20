@@ -4,21 +4,30 @@ export type TTodo = {
   title: string;
   description: string;
   done: boolean;
+  archived: boolean;
 };
 
 export interface ITodo extends TTodo, Document {}
 
-const todoSchema = new Schema<ITodo>({
-  title: {
-    type: String,
+const todoSchema = new Schema<ITodo>(
+  {
+    title: {
+      type: String,
+    },
+    description: {
+      type: String,
+    },
+    done: {
+      type: Boolean,
+    },
+    archived: {
+      type: Boolean,
+    },
   },
-  description: {
-    type: String,
+  {
+    timestamps: true,
   },
-  done: {
-    type: Boolean,
-  },
-});
+);
 
 export const TodoModel = model("todos", todoSchema);
 export default TodoModel;
